@@ -1,0 +1,50 @@
+{
+  "name": "craq_validation",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "readline-sync": "^1.4.10",
+    "shx": "^0.3.4",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "mocha": "^10.0.0",
+    "mocha-junit-reporter": "^2.1.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "clean": "shx rm -rf ./cache ./types ./*.xml",
+    "lint": "yarn lint:ts && yarn prettier:check",
+    "lint:ts": "eslint --config ./.eslintrc.yaml --ignore-path ./.eslintignore --ext .js,.ts .",
+    "prettier": "prettier --config ./.prettierrc.yaml --write \"**/*.{js,json,md,sol,ts}\"",
+    "prettier:check": "prettier --check --config ./.prettierrc.yaml \"**/*.{js,json,md,sol,ts}\"",
+    "test": "cross-env TEST=true mocha --config test/runners/mocha/.mocharc.jsonc",
+    "test_xml": "cross-env MOCHA_FILE=./testresults.xml mocha test --config test/runners/mocha/.mocharc.jsonc --reporter mocha-junit-reporter",
+    "run_app": "ts-node ./src/validation/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinfinity/CRAQ_Validation.git"
+  },
+  "author": {
+    "name": "Egbewatt Kokou"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kinfinity/CRAQ_Validation/issues"
+  },
+  "homepage": "https://github.com/kinfinity/CRAQ_Validation#readme"
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "question": "q0",
+    "text": "What is the meaning of life?",
+    "options": [{ "text": "41" }, { "text": "42", "complete_if_selected": true }]
+  },
+
+  {
+    "question": "q1",
+    "text": "Why did you not select 42 as the answer to the previous question?",
+    "options": [{ "text": "I'd far rather be happy than right any day" }, { "text": "I don't get that reference" }]
+  }
+]

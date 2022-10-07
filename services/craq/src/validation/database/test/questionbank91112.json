@@ -1,0 +1,12 @@
+[
+  {
+    "question": "q0",
+    "text": "What is the meaning of life?",
+    "options": [{ "text": "yes" }, { "text": "no", "complete_if_selected": true }]
+  },
+  {
+    "question": "q1",
+    "text": "What is the meaning of life?",
+    "options": [{ "text": "an option" }, { "text": "another option" }]
+  }
+]
